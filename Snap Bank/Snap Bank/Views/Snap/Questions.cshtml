@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Questions";
+}
+@section AddToHead
+{
+    <link href="@Url.Content("~/Content/Questions.css")" rel="stylesheet" type="text/css" />
+}
+
+<div class="pt-5 wrap-div">
+    <div class="card border-0 shadow main-card">
+        <div class="card-body">
+            <div class="text-center mb-5 mt-5">
+                <h2>Security Questions</h2>
+            </div>
+            <form action="/Snap/Home/" class="mx-5">
+                <div class="m-4">
+                    <label for="bplace">What is your birth place?</label>
+                    <input type="text" name="bplace" id="" class="form-control form-control-md mt-3" />
+                </div>
+                <div class="m-4">
+                    <label for="bplace">What is your pet name?</label>
+                    <input type="text" name="bplace" id="" class="form-control form-control-md mt-3 " />
+                </div>
+                <div class="m-4">
+                    <label for="bplace">What is your Favourite food?</label>
+                    <input type="text" name="bplace" id="" class="form-control form-control-md mt-3" />
+                </div>
+                <div class="d-flex flex-row-reverse">
+                    <div class="text-center">
+                        <button class="btn btn-primary mx-5 mt-3">SUBMIT</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

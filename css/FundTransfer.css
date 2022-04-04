@@ -1,0 +1,105 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    
+  background-image: url(../assets/images/back5.jpg);
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    max-width: 100px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    justify-content: space-between;
+  }
+  .sidebar img{
+    width: 80%;
+    margin: 10px;
+  }
+  .sidebar .buttons{
+    bottom: 1rem; 
+  }
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  .logoText{
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 5%;
+    text-align: center;   
+  }
+  .sidebar a.active {
+    text-align: center;
+    color: white;
+  }
+  .sidebar a img{
+    width: 40%;
+  }
+
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .sidebar {
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
+      width: 100%;
+      height: rem;
+      position: relative;
+    }
+    .sidebar .logoText{
+      font-size: large;
+      margin: 0;
+      padding: 1rem;
+    }
+    .sidebar .buttons{
+      margin-top: 5px;
+      padding: 0;
+      bottom: unset;
+      right: 0;
+    }
+    .sidebar .buttons a{
+      padding: 0;
+    }
+    .sidebar .buttons a img{
+      width: 2.5rem;
+      height: auto;
+    }
+    .sidebar img{
+      height: 3rem;
+      width: auto;
+      margin: 10px;
+    }
+    .sidebar a {
+      float: left;
+    }
+    div.content {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    
+  }
+
+.user-image{
+    width: 10rem;
+    margin-bottom: 2rem;
+}

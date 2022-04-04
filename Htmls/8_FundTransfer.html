@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/FundTransfer.css" />
+</head>
+
+<body>
+  <div class="row" style="width: 100%;">
+    <div class="col-1 col-md-1">
+      <div class="sidebar">
+        <div class="imageContainer">
+          <img src="../assets/images/family icon.png" alt="family image" />
+          <div class="logoText">SNAP BANK</div>
+        </div>
+        <div class="buttons">
+          <a class="active" href="./5_Homepage.html">
+            <img src="../assets/images/home.png" alt="" />
+          </a>
+          <a class="active" href="./1_SignIn.html">
+            <img src="../assets/images/log-out.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-11 col-md-11 col-sm-11" style="padding: 3% 1%;">
+      <div class="card border-2" style="background-color: #f1f1f1;">
+        <div class="row">
+
+          <div class="col m-5">
+            <div class="card" style="background-color: #f1f1f1;">
+              <div class="card-body">
+                <div class="d-flex justify-content-right h3">
+                  SERVICE IS OUR MOTO
+                </div>
+                <div class="d-flex justify-content-right h5">
+                  BALANCE : £31,142
+                </div>
+                <div class="d-flex justify-content-right mt-4 h3 mb-3">
+                  SAME ACCOUNT TRANSFER
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-12 col-sd-12">
+                    <span style="font-weight: bold; color: brown; margin-top: 10px">From</span>
+                    <div class="mt-0 mb-3">
+                      <label for="floatingTextarea">Enter Savings / Current Account</label>
+                        <select class="form-select" onchange="hideShowRangePicker(this.value)" >
+                          <option selected>Choose Account Type</option>
+                          <option value="Savings Account">Savings Account</option>
+                          <option value="Current Account">Current Account</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 col-sd-12">
+                    <span style="font-weight: bold; color: brown; margin-top: 10px">To Account</span>
+                    <div class="mt-0">
+                      <label for="floatingTextarea">Account no:</label>
+                      <select class="form-select" onchange="hideShowRangePicker(this.value)" >
+                        <option selected>Choose Account Type</option>
+                        <option value="Savings Account">Savings Account</option>
+                        <option value="Current Account">Current Account</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-right mt-4 h3 mb-3">
+                  DIFFERENT ACCOUNT TRANSFER
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <span style="font-weight: bold; color: brown; margin-top: 10px">From</span>
+                    <div class="mt-0 mb-3">
+                      <label for="floatingTextarea">Enter Savings / Current Account</label>
+                      <select class="form-select" onchange="hideShowRangePicker(this.value)" >
+                        <option selected>Choose Account Type</option>
+                        <option value="Savings Account">Savings Account</option>
+                        <option value="Current Account">Current Account</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <span style="font-weight: bold; color: brown; margin-top: 10px">To Country</span>
+                    <div class="mt-0">
+                      <label for="floatingTextarea"></label>
+                      <select class="form-select" onchange="hideShowRangePicker(this.value)" >
+                        <option selected>Select Country </option>
+                        <option value="Savings Account">United Kingdom</option>
+                        <option value="Current Account">Europe</option>
+                        <option value="Current Account">United States of America</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col m-5">
+            <div class="card" style="background-color: #f1f1f1;">
+              <div class="card-body">
+                <div class="d-flex justify-content-right mt-4 h3 mb-3">
+                  RECIEPIENT ACCOUNT DETAILS
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <label>Sort Code</label>
+                    <div class="row">
+                      <div class="col">
+                        <input type="number" class="form-control form-control-md" />
+                      </div>
+                      -
+                      <div class="col">
+                        <input type="number" class="form-control form-control-md" />
+                      </div>
+                      -
+                      <div class="col">
+                        <input type="number" class="form-control form-control-md" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mt-2">
+                      <label for="floatingTextarea">Enter Account Number</label>
+                      <input type="text" name="" id="" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <label for="floatingTextarea">Enter Account Holder Name : </label>
+                  <input type="text" name="" id="" class="form-control" />
+                </div>
+                <div class="mt-2">
+                  <label for="floatingTextarea">Bank Name : </label>
+                  <input type="text" name="" id="" class="form-control" />
+
+                </div>
+                <div class="transfer-detailes2">
+                  <div class="d-flex justify-content-right mt-4 h3 mb-3">
+                    PAYMENT DETAILS
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="mt-0 mb-3">
+                        <label for="floatingTextarea">Eneter Amount in GBP </label>
+                        <input type="text" name="" id="" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mt-0">
+                        <label for="floatingTextarea">Transfer Amount in GBP / EUR / DOLLARS</label>
+                        <input type="text" name="" id="" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+                  <span style="font-weight: bold; color: brown; margin-top: 10px"></span>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="d-flex justify-content-right mt-4 h4 mb-3">
+                        Conversion Rate:
+                      </div>
+                    </div>
+                    <div class="col mt-4 mb-3">
+                      <input type="text" name="" id="" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="mt-0 mb-3">
+                    <label for="floatingTextarea">Enter Six-Digit Pin </label>
+                    <input type="password" name="" id="" class="form-control" />
+                  </div>
+                  <div class="d-flex justify-content-right mt-4 h3 mb-3"></div>
+                  <div class="button">
+                    <button type="button" class="btn btn-primary" style="padding-left: 2.5rem; padding-right: 2.5rem"
+                      onclick="location.href='./9_PaymentSuccessFull.html';">
+                      CONFIRM PAYMENT
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

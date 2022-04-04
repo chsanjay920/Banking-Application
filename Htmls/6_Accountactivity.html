@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/AccountActivity.css" />
+
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-sm-2 col-md-2">
+      <div class="sidebar">
+        <div class="ImageContainer">
+          <img src="../assets/images/family icon.png" alt="family image" />
+          <div class="logoText">SNAP BANK</div>
+        </div>
+        <div class="buttons">
+          <a class="active" href="./5_Homepage.html">
+            <img src="../assets/images/home.png" alt="" />
+          </a>
+          <a class="active" href="./11_Support.html">
+            <img src="../assets/images/support.png" alt="" />
+          </a>
+          <a class="active" href="./1_SignIn.html">
+            <img src="../assets/images/log-out.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-8 mt-5">
+      <div class="card border-2" style="background-color: #f1f1f1;">
+        <div class="card-body p-4">
+          <div class="text-center">
+            <div class="d-flex justify-content-right mt-5 h2">
+              ACCOUNT ACTIVITY
+            </div>
+            <div class="d-flex justify-content-center mt-5 h4">
+              <input type="radio" class="m-2" name="account" id="account">
+              SAVINGS ACCOUNT
+              <input type="radio" class="m-2" name="account" id="account">
+              CURRENT ACCOUNT
+            </div>
+            <div class="d-flex justify-content-around mt-5 row">
+              <div class="col-4">
+                <p class="h5">CLOSING BALANCE: <b> £31,142</b></p>
+              </div>
+              <div class="col-8 row">
+                  <div class="col-3" style="margin-left: 0%; padding-left:0%;">
+                    <select class="form-select" onchange="hideShowRangePicker(this.value)" >
+                      <option selected>Choose Dates </option>
+                      <option value="last week">last week</option>
+                      <option value="2">last 2 weeks</option>
+                      <option value="3">last month</option>
+                      <option value="4" >Custom Date</option>
+                    </select>
+                  </div>
+                  <div class="datePicker col-7" id="dataPicker" style="display: none;">
+                    <div class="row">
+                      <!-- <label class="col-2" for="toDate" style="margin-right: 0%;padding-right: 0%;">From</label> -->
+                    <input class="col-5 form-control form-control-md" style="width: 175px" type="date" name="toDate"/>
+                    <label class="col-2">
+                      <img style="width: 40px;" src="../assets/images/double-arrow.png" alt="">
+                    </label>
+                    <input class="col-5 form-control form-control-md" style="width: 175px;" type="date" name="toDate"/>
+                    </div>
+                  </div>
+                  <div class="col-1">
+                    <button class="btn btn-outline-primary" type="button">Select</button>
+                  </div>
+              </div>
+            </div>
+            <table class="table table-bordered mt-5">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">DISCRIPTION</th>
+                  <th scope="col">WITHDRAWLS</th>
+                  <th scope="col">DEPOSITS</th>
+                  <th scope="col">BALANCE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">14-03-2022</th>
+                  <td>JONES</td>
+                  <td></td>
+                  <td>+£500</td>
+                  <td>+£31000</td>
+                </tr>
+                <tr>
+                  <th scope="row">14-03-2022</th>
+                  <td>STEVE</td>
+                  <td>+£30,500</td>
+                  <td> </td>
+                  <td>+£500</td>
+                </tr>
+                <tr>
+                  <th scope="row">14-03-2022</th>
+                  <td>JAMES</td>
+                  <td></td>
+                  <td>+£500</td>
+                  <td>+£30,500</td>
+                </tr>
+                <tr>
+                  <th scope="row">14-03-2022</th>
+                  <td>ALEX</td>
+                  <td></td>
+                  <td>+£1500</td>
+                  <td>+£30,500</td>
+                </tr>
+              </tbody>
+            </table>
+            <button type="button" class="btn btn-primary" style="padding-left: 2.5rem; padding-right: 2.5rem">
+              PRINT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function hideShowRangePicker(e){
+      //dataPicker
+      if(e==4){
+        document.getElementById("dataPicker").style.display="block";
+      }else{
+        document.getElementById("dataPicker").style.display="none";
+      }
+    }
+  </script>
+</body>
+
+</html>
