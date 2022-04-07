@@ -9,12 +9,12 @@ namespace Snap_Bank.Services
 {
     public interface IAccountTableService
     {
-        List<AccountTable> Get();
+        IEnumerable<AccountTable> Get();
 
-        List<AccountTable> Post(AccountTable accountTable);
+        IEnumerable<AccountTable> Post(AccountTable accountTable);
 
-        List<AccountTable> Delete(int id);
+        IEnumerable<AccountTable> Delete(int id);
 
-        List<AccountTable> Put(AccountTable accountTable);
+        IEnumerable<AccountTable> Put(AccountTable accountTable);
     }
 }
