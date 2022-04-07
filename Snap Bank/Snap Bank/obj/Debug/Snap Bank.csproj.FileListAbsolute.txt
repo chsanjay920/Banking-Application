@@ -218,3 +218,7 @@ C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.csproj.CopyComplete
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.dll
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.pdb
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.SqlServer.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.xml
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.SqlServer.xml

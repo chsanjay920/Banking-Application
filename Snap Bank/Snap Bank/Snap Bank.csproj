@@ -121,6 +121,13 @@
     <Compile Include="Models\Transactions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AccountTableService.cs" />
+    <Compile Include="Services\IAccountTableService.cs" />
+    <Compile Include="Services\IPersonalDetailsService.cs" />
+    <Compile Include="Services\ISecurityQuestionsService.cs" />
+    <Compile Include="Services\ITransactionsService.cs" />
+    <Compile Include="Services\PersonalDetailsService.cs" />
+    <Compile Include="Services\SecurityQuestionsService.cs" />
+    <Compile Include="Services\TransactionsService.cs" />
     <Compile Include="SnapDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
