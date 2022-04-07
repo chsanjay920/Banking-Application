@@ -5,3 +5,14 @@ Snap Bank/.vs/Snap Bank/config/applicationhost.config
 Snap Bank/.vs/Snap Bank/v17/.suo
 Snap Bank/.vs/Snap Bank/project-colors.json
 Snap Bank/Snap Bank/obj/Debug/Snap Bank.csproj.AssemblyReference.cache
+Snap Bank/.vs/Snap Bank/config/applicationhost.config
+*.config
+Snap Bank/.vs/Snap Bank/v17/.suo
+Snap Bank/Snap Bank/bin/Snap Bank.dll
+Snap Bank/Snap Bank/bin/Snap Bank.dll.config
+Snap Bank/Snap Bank/bin/Snap Bank.pdb
+Snap Bank/Snap Bank/Snap Bank.csproj.user
+Snap Bank/Snap Bank/Snap Bank.csproj
+*.pdb
+Snap Bank/Snap Bank/obj/Debug/Snap Bank.csproj.FileListAbsolute.txt
+*.cache

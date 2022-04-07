@@ -11,9 +11,9 @@ namespace Snap_Bank.Controllers
         // GET: Snap
         public ActionResult Index()
         {
-            SnapDbContext db = new SnapDbContext();
-            db.securityQuestions.Add(new Models.SecurityQuestions { BirthPlace="hyd", PetName="ca", FavouriteFood="ck" });
-            db.SaveChanges();
+            //SnapDbContext db = new SnapDbContext();
+            //db.securityQuestions.Add(new Models.SecurityQuestions { BirthPlace="hyd", PetName="ca", FavouriteFood="ck" });
+            //db.SaveChanges();
             return View();
         }
         public ActionResult Register()

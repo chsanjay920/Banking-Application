@@ -194,16 +194,6 @@ C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\rosly
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\vbc.rsp
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\VBCSCompiler.exe
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.dll
-C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.SqlServer.dll
-C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Helpers.dll
-C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Mvc.dll
-C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Razor.dll
-C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Webpages.Deployment.dll
-C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Webpages.dll
-C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Webpages.Razor.dll
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.xml
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.SqlServer.xml
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Razor.xml
