@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Snap_Bank.Services
 {
-    public class AccountTable
+    public class AccountTableService
     {
 
     }

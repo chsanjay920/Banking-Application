@@ -112,7 +112,7 @@
     <Compile Include="Models\PersonalDetails.cs" />
     <Compile Include="Models\SecurityQuestions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AccountTable.cs" />
+    <Compile Include="Services\AccountTableService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
