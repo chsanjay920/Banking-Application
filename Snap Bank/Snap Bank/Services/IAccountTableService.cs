@@ -11,10 +11,10 @@ namespace Snap_Bank.Services
     {
         IEnumerable<AccountTable> Get();
 
-        IEnumerable<AccountTable> Post(AccountTable accountTable);
+        bool Post(AccountTable accountTable);
 
-        IEnumerable<AccountTable> Delete(int id);
+        bool Delete(int id);
 
-        IEnumerable<AccountTable> Put(AccountTable accountTable);
+        bool Put(AccountTable accountTable);
     }
 }

@@ -15,21 +15,22 @@ namespace Snap_Bank.Services
             snapDbContext = new SnapDbContext();
         }
 
-        public List<SecurityQuestions> Get()
+        public IEnumerable<SecurityQuestions> Get()
         {
             return snapDbContext.securityQuestions.ToList();
         }
 
-        public List<SecurityQuestions> Post(SecurityQuestions securityQuestion)
+        public bool Post(SecurityQuestions securityQuestion)
         {
             using (var dbContext = new SnapDbContext())
             {
                 dbContext.securityQuestions.Add(securityQuestion);
                 dbContext.SaveChanges();
+                return true;
             }
-            return Get();
+            return false;
         }
-        public List<SecurityQuestions> Delete(int id)
+        public bool Delete(int id)
         {
             using (var ent = new SnapDbContext())
             {
@@ -38,11 +39,12 @@ namespace Snap_Bank.Services
                 {
                     ent.securityQuestions.Remove(user);
                     ent.SaveChanges();
+                    return true;
                 }
-                return Get();
+                return false;
             }
         }
-        public List<SecurityQuestions> Put(SecurityQuestions securityQuestion)
+        public bool Put(SecurityQuestions securityQuestion)
         {
             using (var ent = new SnapDbContext())
             {
@@ -54,8 +56,9 @@ namespace Snap_Bank.Services
                     temp.FavouriteFood = securityQuestion.FavouriteFood;
                 }
                 ent.SaveChanges();
+                return true;
             }
-            return Get();
+            return false;
         }
     }
 }

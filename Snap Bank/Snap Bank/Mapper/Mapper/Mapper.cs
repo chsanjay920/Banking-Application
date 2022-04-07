@@ -9,7 +9,7 @@ namespace Snap_Bank.Mapper
 {
     public class Mapper
     {
-        public AccountViewModel MapAccountViewModelToAccount(AccountViewModel accountViewModel, AccountTable account)
+        public AccountTable MapAccountViewModelToAccount(AccountViewModel accountViewModel, AccountTable account)
         {
             account.AccountNumber = accountViewModel.AccountNumber;
             account.AccountType = accountViewModel.AccountType;
@@ -20,10 +20,10 @@ namespace Snap_Bank.Mapper
             account.Pin = accountViewModel.Pin;
 
 
-            return accountViewModel;
+            return account;
         }
 
-        public AccountTable MapAccountToMapAccountViewModel(AccountTable account, AccountViewModel accountViewModel)
+        public AccountViewModel MapAccountToMapAccountViewModel(AccountTable account, AccountViewModel accountViewModel)
         {
             accountViewModel.AccountNumber = account.AccountNumber;
             accountViewModel.AccountType = account.AccountType;
@@ -33,10 +33,10 @@ namespace Snap_Bank.Mapper
             accountViewModel.UserName = account.UserName;
             accountViewModel.Pin = account.Pin;
 
-            return account;
+            return accountViewModel;
         }
 
-        public PersonalDetailsViewModel PersonalDetailsViewModelToPersonalDetails(PersonalDetailsViewModel personalDetailsViewModel, PersonalDetails personalDetails)
+        public PersonalDetailsViewModel MapPersonalDetailsToPersonalDetailsViewMOdel (PersonalDetailsViewModel personalDetailsViewModel, PersonalDetails personalDetails)
         {
             personalDetailsViewModel.UserId = personalDetails.UserId;
             personalDetailsViewModel.FirstName = personalDetails.FirstName;
@@ -50,7 +50,7 @@ namespace Snap_Bank.Mapper
 
         }
 
-        public PersonalDetails MapPersonalDetailsToPersonalDetailsViewMOdel(PersonalDetails personalDetails, PersonalDetailsViewModel personalDetailsViewModel)
+        public PersonalDetails PersonalDetailsViewModelToPersonalDetails(PersonalDetails personalDetails, PersonalDetailsViewModel personalDetailsViewModel)
         {
             personalDetails.UserId = personalDetailsViewModel.UserId;
             personalDetails.FirstName = personalDetailsViewModel.FirstName;
@@ -63,7 +63,7 @@ namespace Snap_Bank.Mapper
             return personalDetails;
         }
 
-        public SecurityQuestionsViewModel MapSecurityQuestionsViewModelToSecurityQuestions(SecurityQuestionsViewModel securityQuestionsViewModel, SecurityQuestions securityQuestions)
+        public SecurityQuestionsViewModel MapSecurityQuestionsToSecurityQuestionsViewModel (SecurityQuestionsViewModel securityQuestionsViewModel, SecurityQuestions securityQuestions)
         {
             securityQuestionsViewModel.UserId = securityQuestions.UserId;
             securityQuestionsViewModel.PetName = securityQuestions.PetName;
@@ -73,7 +73,7 @@ namespace Snap_Bank.Mapper
             return securityQuestionsViewModel;
         }
 
-        public SecurityQuestions MapSecurityQuestionsToSecurityQuestionsViewModel(SecurityQuestions securityQuestions, SecurityQuestionsViewModel securityQuestionsViewModel)
+        public SecurityQuestions MapSecurityQuestionsViewModelToSecurityQuestions(SecurityQuestions securityQuestions, SecurityQuestionsViewModel securityQuestionsViewModel)
         {
             securityQuestions.UserId = securityQuestionsViewModel.UserId;
             securityQuestions.PetName = securityQuestionsViewModel.PetName;
@@ -83,7 +83,7 @@ namespace Snap_Bank.Mapper
             return securityQuestions;
         }
 
-        public Transactions MapTransactionsToTranscationViewModel(Transactions transactions, TransactionViewModel transactionViewModel)
+        public Transactions MapTransactionViewModelToTranscations (Transactions transactions, TransactionViewModel transactionViewModel)
         {
             transactions.UserId = transactionViewModel.UserId;
             transactions.TransactionDate = transactionViewModel.TransactionDate;
@@ -98,7 +98,7 @@ namespace Snap_Bank.Mapper
             return transactions;
         }
 
-        public TransactionViewModel MapTransactionViewModelToTranscations(TransactionViewModel transactionsViewModel, Transactions transactions)
+        public TransactionViewModel MapTransactionsToTranscationViewModel(TransactionViewModel transactionsViewModel, Transactions transactions)
         {
             transactionsViewModel.UserId = transactions.UserId;
             transactionsViewModel.TransactionDate = transactions.TransactionDate;

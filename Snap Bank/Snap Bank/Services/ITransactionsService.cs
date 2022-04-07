@@ -9,12 +9,12 @@ namespace Snap_Bank.Services
 {
     public interface ITransactionsService
     {
-        List<Transactions> Get();
+        IEnumerable<Transactions> Get();
 
-        List<Transactions> Post(Transactions transaction);
+        bool Post(Transactions transaction);
 
-        List<Transactions> Delete(int id);
+        bool Delete(int id);
 
-        List<Transactions> Put(Transactions transaction);
+        bool Put(Transactions transaction);
     }
 }

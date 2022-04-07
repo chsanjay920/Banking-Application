@@ -15,21 +15,22 @@ namespace Snap_Bank.Services
             snapDbContext = new SnapDbContext();
         }
 
-        public List<PersonalDetails> Get()
+        public IEnumerable<PersonalDetails> Get()
         {
             return snapDbContext.personalDetails.ToList();
         }
 
-        public List<PersonalDetails> Post(PersonalDetails personalDetail)
+        public bool Post(PersonalDetails personalDetail)
         {
             using (var dbContext = new SnapDbContext())
             {
                 dbContext.personalDetails.Add(personalDetail);
                 dbContext.SaveChanges();
+                return true;
             }
-            return Get();
+            return false;
         }
-        public List<PersonalDetails> Delete(int id)
+        public bool Delete(int id)
         {
             using (var ent = new SnapDbContext())
             {
@@ -38,11 +39,12 @@ namespace Snap_Bank.Services
                 {
                     ent.personalDetails.Remove(user);
                     ent.SaveChanges();
+                    return true;
                 }
-                return Get();
+                return false;
             }
         }
-        public List<PersonalDetails> Put(PersonalDetails personalDetail)
+        public bool Put(PersonalDetails personalDetail)
         {
             using (var ent = new SnapDbContext())
             {
@@ -57,8 +59,9 @@ namespace Snap_Bank.Services
                     temp.MobileNumber = personalDetail.MobileNumber;
                 }
                 ent.SaveChanges();
+                return true;
             }
-            return Get();
+            return false;
         }
     }
 }

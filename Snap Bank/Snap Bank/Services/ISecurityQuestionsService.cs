@@ -9,12 +9,12 @@ namespace Snap_Bank.Services
 {
     public interface ISecurityQuestionsService
     {
-        List<SecurityQuestions> Get();
+        IEnumerable<SecurityQuestions> Get();
 
-        List<SecurityQuestions> Post(SecurityQuestions securityQuestion);
+        bool Post(SecurityQuestions securityQuestion);
 
-        List<SecurityQuestions> Delete(int id);
+        bool Delete(int id);
 
-        List<SecurityQuestions> Put(SecurityQuestions securityQuestion);
+        bool Put(SecurityQuestions securityQuestion);
     }
 }

@@ -9,13 +9,13 @@ namespace Snap_Bank.Services
 {
     public interface IPersonalDetailsService
     {
-        List<PersonalDetails> Get();
+        IEnumerable<PersonalDetails> Get();
 
-        List<PersonalDetails> Post(PersonalDetails personalDetail);
+        bool Post(PersonalDetails personalDetail);
 
-        List<PersonalDetails> Delete(int id);
+        bool Delete(int id);
 
-        List<PersonalDetails> Put(PersonalDetails personalDetail);
+        bool Put(PersonalDetails personalDetail);
 
     }
 }

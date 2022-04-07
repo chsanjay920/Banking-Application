@@ -15,21 +15,22 @@ namespace Snap_Bank.Services
             snapDbContext = new SnapDbContext();
         }
 
-        public List<Transactions> Get()
+        public IEnumerable<Transactions> Get()
         {
             return snapDbContext.transactions.ToList();
         }
 
-        public List<Transactions> Post(Transactions transaction)
+        public bool Post(Transactions transaction)
         {
             using (var dbContext = new SnapDbContext())
             {
                 dbContext.transactions.Add(transaction);
                 dbContext.SaveChanges();
+                return true;
             }
-            return Get();
+            return false;
         }
-        public List<Transactions> Delete(int id)
+        public bool Delete(int id)
         {
             using (var ent = new SnapDbContext())
             {
@@ -38,11 +39,12 @@ namespace Snap_Bank.Services
                 {
                     ent.transactions.Remove(user);
                     ent.SaveChanges();
+                    return true;
                 }
-                return Get();
+                return false;
             }
         }
-        public List<Transactions> Put(Transactions transaction)
+        public bool Put(Transactions transaction)
         {
             using (var ent = new SnapDbContext())
             {
@@ -59,8 +61,9 @@ namespace Snap_Bank.Services
                     temp.AccountType = transaction.AccountType;
                 }
                 ent.SaveChanges();
+                return true;
             }
-            return Get();
+            return false;
         }
     }
 }
