@@ -64,6 +64,7 @@
                                 <input class="form-control form-control-md" />
                             </div>
                         </div>
+
                     </div>
                     <div style="padding-left: 10%; padding-right: 10%">
                         <hr />
@@ -71,7 +72,7 @@
                     <div class="row">
                         <h6 style="color: brown;">Account Details:</h6>
                         <div class="row">
-                            <div class="col-md-6 col-sd-12">
+                            <div class="col-4 col-md-4 col-sd-12">
                                 <label>Sort Code</label>
                                 <div class="row">
                                     <div class="col">
@@ -85,10 +86,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sd-12">
+                            <div class="col-2 col-md-2 col-sd-12 mt-4">
+                                <select class="form-select" onchange="hideShowRangePicker(this.value)">
+                                    <option selected>Choose Account Type</option>
+                                    <option value="Savings Account">Savings Account</option>
+                                    <option value="Current Account">Current Account</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-md-6 col-sd-12">
                                 <label>Account Number</label>
                                 <input class="form-control form-control-md" />
                             </div>
+                        </div>
+                        <div class="row">
+
                         </div>
                     </div>
                     <div style="padding-left: 10%; padding-right: 10%">
