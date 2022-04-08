@@ -212,3 +212,7 @@ C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.SqlServer.dll
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.xml
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.SqlServer.xml
+C:\Users\Akhila\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.csproj.AssemblyReference.cache
+C:\Users\Akhila\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.csproj.CoreCompileInputs.cache
+C:\Users\Akhila\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.dll
+C:\Users\Akhila\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.pdb
