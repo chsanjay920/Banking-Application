@@ -1,4 +1,5 @@
-﻿
+﻿@model Snap_Bank.ViewModel.RegisterViewModel
+
 @{
     ViewBag.Title = "Questions";
 }
@@ -13,25 +14,32 @@
             <div class="text-center mb-5 mt-5">
                 <h2>Security Questions</h2>
             </div>
-            <form action="/Snap/Home/" class="mx-5">
+            @using (Html.BeginForm("Questions", "Snap", FormMethod.Post))
+            {
                 <div class="m-4">
                     <label for="bplace">What is your birth place?</label>
                     <input type="text" name="bplace" id="" class="form-control form-control-md mt-3" />
+                    @Html.EditorFor(model => model.SecurityQuestion1, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                    @Html.ValidationMessageFor(model => model.SecurityQuestion1, "", new { @class = "text-danger" })
+
                 </div>
                 <div class="m-4">
                     <label for="bplace">What is your pet name?</label>
-                    <input type="text" name="bplace" id="" class="form-control form-control-md mt-3 " />
+                    @Html.EditorFor(model => model.SecurityQuestion2, new { htmlAttributes = new { @class = "form-control form-control-md mt-3 " } })
+                    @Html.ValidationMessageFor(model => model.SecurityQuestion2, "", new { @class = "text-danger" })
                 </div>
                 <div class="m-4">
                     <label for="bplace">What is your Favourite food?</label>
-                    <input type="text" name="bplace" id="" class="form-control form-control-md mt-3" />
+                    @Html.EditorFor(model => model.SecurityQuestion3, new { htmlAttributes = new { @class = "form-control form-control-md mt-3 " } })
+                    @Html.ValidationMessageFor(model => model.SecurityQuestion3, "", new { @class = "text-danger" })
+
                 </div>
                 <div class="d-flex flex-row-reverse">
                     <div class="text-center">
                         <button class="btn btn-primary mx-5 mt-3">SUBMIT</button>
                     </div>
                 </div>
-            </form>
+            }
         </div>
     </div>
 </div>

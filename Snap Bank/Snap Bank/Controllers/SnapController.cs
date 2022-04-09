@@ -33,15 +33,31 @@ namespace Snap_Bank.Controllers
             registerViewModel.AccountNumber = myRandomNo;
             return View(registerViewModel);
         }
+
+
+        [HttpPost]
+        public ActionResult Register(RegisterViewModel registerViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+
+                return RedirectToAction("Questions", "Snap", registerViewModel);
+            }
+            return View(registerViewModel);
+        }
+
         public ActionResult Home()
         {
             return View();
         }
         public ActionResult Questions(RegisterViewModel registerViewModel, Gender? gender, AccountType? accountType)
         {
-            registerViewModel.Gender = gender.ToString();
-            registerViewModel.AccountType = accountType.ToString();
-            registerViewModel.CompleteSortCode = int.Parse(registerViewModel.SortCode1.ToString() + registerViewModel.SortCode2.ToString() + registerViewModel.SortCode3.ToString());
+            if (ModelState.IsValid)
+            {
+                registerViewModel.Gender = gender.ToString();
+                registerViewModel.AccountType = accountType.ToString();
+                registerViewModel.CompleteSortCode = int.Parse(registerViewModel.SortCode1.ToString() + registerViewModel.SortCode2.ToString() + registerViewModel.SortCode3.ToString());
+            }
             return View(registerViewModel);
         }
         public ActionResult ForgetPassword()
