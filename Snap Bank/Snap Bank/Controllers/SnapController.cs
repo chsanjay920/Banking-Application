@@ -12,9 +12,9 @@ namespace Snap_Bank.Controllers
 {
     public class SnapController : Controller
     {
-        public SnapController( )
+        public SnapController()
         {
-            
+
         }
         // GET: Snap
         public ActionResult Index()
@@ -37,7 +37,7 @@ namespace Snap_Bank.Controllers
         {
             return View();
         }
-        public ActionResult Questions(RegisterViewModel registerViewModel,Gender? gender, AccountType? accountType)
+        public ActionResult Questions(RegisterViewModel registerViewModel, Gender? gender, AccountType? accountType)
         {
             registerViewModel.Gender = gender.ToString();
             registerViewModel.AccountType = accountType.ToString();

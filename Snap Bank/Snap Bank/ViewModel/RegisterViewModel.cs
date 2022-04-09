@@ -11,7 +11,8 @@ namespace Snap_Bank.ViewModel
     {
         public String FirstName { get; set; }
         public String LastName { get; set; }
-        public Date DateOfBirth { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime? DateOfBirth { get; set; }
         public String Gender { get; set; }
         public String Email { get; set; }
         public String Phone { get; set; }
@@ -20,7 +21,7 @@ namespace Snap_Bank.ViewModel
         public int SortCode3 { get; set; }
         public int CompleteSortCode { get; set; }
         public String AccountType { get; set; }
-        public int AccountNumber { get; set; }
+        public Decimal AccountNumber { get; set; }
         public String UserName { get; set; }
 
         [Required(ErrorMessage = "Please enter password")]

@@ -40,18 +40,7 @@
                                 <label>Date of Birth</label>
                                 @Html.LabelFor(model => model.DateOfBirth)
                                 @Html.TextBoxFor(model => model.DateOfBirth, new { type = "date", @class = "form-control" })
-                                @{//Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { id = "datepicker", @class = "form-control form-control-md" } })
-                                  //Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
-                                    }
-                                <script>
-                                    $(document).ready(function () {
-                                        $("#datepicker").datepicker({
-                                            dateFormat: "dd-mm-yy",
-                                            changemonth: true,
-                                            changeyear: true
-                                        });
-                                    });
-                                </script>
+                                @*<input type="date" name="DateOfBirth" id="DateOfBirth" class="form-control" />*@
                             </div>
                             <div class="col-md-6 col-sd-12">
                                 <label>Gender</label>
@@ -100,15 +89,11 @@
                             <div class="col-2 col-md-2 col-sd-12 mt-4">
                                 @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.AccountType))), "Select Account Type", new { htmlAttributes = new { @class = "form-select" } })
 
-                                @*<select class="form-select" onchange="hideShowRangePicker(this.value)">
-            <option selected>Choose Account Type</option>
-            <option value="Savings Account">Savings Account</option>
-            <option value="Current Account">Current Account</option>
-        </select>*@
+
                             </div>
                             <div class="col-6 col-md-6 col-sd-12">
                                 <label>Account Number</label>
-                                @Html.EditorFor(model => model.AccountNumber, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                @Html.EditorFor(model => model.AccountNumber, new { htmlAttributes = new { type = "number", @readonly = "readonly", @class = "form-control form-control-md" } })
                                 @Html.ValidationMessageFor(model => model.AccountNumber, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -140,7 +125,7 @@
                         <div class="row">
                             <div class="col-md-3 col-sd-12">
                                 <label>Pin</label>
-                                @Html.EditorFor(model => model.Pin, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                @Html.EditorFor(model => model.Pin, new { htmlAttributes = new { type = "number", @maxlength = 4, @class = "form-control form-control-md" } })
                                 @Html.ValidationMessageFor(model => model.Pin, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-9">
