@@ -1,5 +1,4 @@
-﻿@model Snap_Bank.ViewModel.RegisterViewModel
-
+﻿
 @{
     ViewBag.Title = "Register";
 }
@@ -16,20 +15,17 @@
                 <h4 class="text-center fw-bold mx-5 mb-4 mt-3">Register your account</h4>
             </div>
             <div class="mx-0 px-5">
-                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-                {
+                <form action="/Snap/Questions/">
                     <div class="row">
                         <h6 style="color: brown;">Personal Details:</h6>
                         <div class="row">
                             <div class="col-md-6 col-sd-12">
                                 <label>First Name</label>
-                                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control form-control-md" } })
-                                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                <input class="form-control form-control-md" />
                             </div>
                             <div class="col-md-6 col-sd-12">
                                 <label>Last Name</label>
-                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control form-control-md" } })
-                                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                <input class="form-control form-control-md" />
                             </div>
                         </div>
                         <div class="row">
@@ -99,10 +95,12 @@
                             </div>
                             <div class="col-6 col-md-6 col-sd-12">
                                 <label>Account Number</label>
-                                <input class="form-control form-control-md" />
+                                <input class="form-control form-control-md" value=@ViewBag.RandomNumber />
                             </div>
                         </div>
+                        <div class="row">
 
+                        </div>
                     </div>
                     <div style="padding-left: 10%; padding-right: 10%">
                         <hr />
@@ -131,17 +129,17 @@
                             </div>
                             <div class="col-9">
                                 <button class="btn btn-primary" style="
-                                    padding-left: 2.5rem;
-                                    padding-right: 2.5rem;
-                                    float: right;
-                                    margin-top: 20px;
-                                  ">
+                        padding-left: 2.5rem;
+                        padding-right: 2.5rem;
+                        float: right;
+                        margin-top: 20px;
+                      ">
                                     Next
                                 </button>
                             </div>
                         </div>
                     </div>
-                }
+                </form>
             </div>
         </div>
     </div>

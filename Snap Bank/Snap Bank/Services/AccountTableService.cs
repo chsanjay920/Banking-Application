@@ -9,7 +9,6 @@ namespace Snap_Bank.Services
     public class AccountTableService : IAccountTableService
     {
         SnapDbContext snapDbContext;
-        AccountTable accountTable;
 
         public AccountTableService()
         {
