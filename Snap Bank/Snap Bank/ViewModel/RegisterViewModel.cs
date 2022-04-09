@@ -11,6 +11,7 @@ namespace Snap_Bank.ViewModel
     {
         public String FirstName { get; set; }
         public String LastName { get; set; }
+
         [DataType(DataType.Date)]
         public DateTime? DateOfBirth { get; set; }
         public String Gender { get; set; }
