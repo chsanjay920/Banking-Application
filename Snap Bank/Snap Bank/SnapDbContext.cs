@@ -16,6 +16,5 @@ namespace Snap_Bank
         public DbSet<PersonalDetails> personalDetails { get; set; }
         public DbSet<SecurityQuestions> securityQuestions { get; set; }
         public DbSet<Transactions> transactions { get; set; }
-        public DbSet<AccountNumber> accountNumbers { get; set; }
     }
 }

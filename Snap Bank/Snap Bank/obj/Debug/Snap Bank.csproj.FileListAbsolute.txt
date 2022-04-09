@@ -90,45 +90,14 @@ C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\Microsoft.Managed.Core.targets
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.AppContext.dll
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Console.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.IO.Compression.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Net.Http.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Net.Sockets.dll
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.ValueTuple.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Xml.XPath.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Xml.XPath.XDocument.dll
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\vbc.exe
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\vbc.exe.config
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\vbc.rsp
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\VBCSCompiler.exe
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Razor.xml
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Webpages.xml
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Webpages.Deployment.xml
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Webpages.Razor.xml
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Helpers.xml
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Web.Mvc.xml
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.csprojAssemblyReference.cache
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.csproj.CoreCompileInputs.cache
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.csproj.CopyComplete
@@ -201,15 +170,10 @@ C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.dll
 C:\Users\User\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\obj\Debug\Snap Bank.pdb
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.xml
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\EntityFramework.SqlServer.xml
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Threading.Tasks.Extensions.dll
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Unity.Abstractions.dll
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Unity.Container.dll
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Unity.Mvc5.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\WebActivatorEx.dll
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Unity.Abstractions.pdb
 C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Unity.Container.pdb
 C:\Users\User\Downloads\Banking-Application\Banking-Application\Snap Bank\Snap Bank\bin\Snap Bank.dll.config
@@ -364,3 +328,23 @@ C:\Users\User\Documents\GitHub\Banking-Application1\Snap Bank\Snap Bank\obj\Debu
 C:\Users\User\Documents\GitHub\Banking-Application1\Snap Bank\Snap Bank\obj\Debug\Snap Bank.csproj.CopyComplete
 C:\Users\User\Documents\GitHub\Banking-Application1\Snap Bank\Snap Bank\obj\Debug\Snap Bank.dll
 C:\Users\User\Documents\GitHub\Banking-Application1\Snap Bank\Snap Bank\obj\Debug\Snap Bank.pdb
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Buffers.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Memory.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Microsoft.OData.Edm.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Buffers.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Memory.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Numerics.Vectors.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Text.Encodings.Web.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Text.Json.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.ValueTuple.dll
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\Microsoft.OData.Edm.xml
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Buffers.xml
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Memory.xml
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Numerics.Vectors.xml
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Text.Encodings.Web.xml
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.Text.Json.xml
+C:\Users\saisi\OneDrive\Documents\GitHub\Banking-Application\Snap Bank\Snap Bank\bin\System.ValueTuple.xml

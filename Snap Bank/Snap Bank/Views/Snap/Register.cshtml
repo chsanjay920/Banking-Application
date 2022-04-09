@@ -19,7 +19,7 @@
                 <h4 class="text-center fw-bold mx-5 mb-4 mt-3">Register your account</h4>
             </div>
             <div class="mx-0 px-5">
-                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                @using (Html.BeginForm("Questions", "Snap", FormMethod.Post))
                 {
                     <div class="row">
                         <h6 style="color: brown;">Personal Details:</h6>
@@ -38,8 +38,11 @@
                         <div class="row">
                             <div class="col-md-6 col-sd-12">
                                 <label>Date of Birth</label>
-                                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { id = "datepicker", @class = "form-control form-control-md" } })
-                                @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+                                @Html.LabelFor(model => model.DateOfBirth)
+                                @Html.TextBoxFor(model => model.DateOfBirth, new { type = "date", @class = "form-control" })
+                                @{//Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { id = "datepicker", @class = "form-control form-control-md" } })
+                                  //Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+                                    }
                                 <script>
                                     $(document).ready(function () {
                                         $("#datepicker").datepicker({
@@ -53,7 +56,7 @@
                             <div class="col-md-6 col-sd-12">
                                 <label>Gender</label>
                                 <div style="margin: 0; padding: 0">
-                                    @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.Gender))), "Select Gender", new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                    @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.Gender))), "Select Gender", new { htmlAttributes = new { @class = "form-select" } })
                                 </div>
                             </div>
                         </div>
@@ -95,13 +98,13 @@
                                 </div>
                             </div>
                             <div class="col-2 col-md-2 col-sd-12 mt-4">
-                                @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.AccountType))), "Select Account Type", new { htmlAttributes = new { @class = "form-select" } })
+                                @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.AccountType))), "Select Account Type", new { htmlAttributes = new { @class = "form-select" } })
 
                                 @*<select class="form-select" onchange="hideShowRangePicker(this.value)">
-                                        <option selected>Choose Account Type</option>
-                                        <option value="Savings Account">Savings Account</option>
-                                        <option value="Current Account">Current Account</option>
-                                    </select>*@
+            <option selected>Choose Account Type</option>
+            <option value="Savings Account">Savings Account</option>
+            <option value="Current Account">Current Account</option>
+        </select>*@
                             </div>
                             <div class="col-6 col-md-6 col-sd-12">
                                 <label>Account Number</label>

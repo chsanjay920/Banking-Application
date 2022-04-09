@@ -1,5 +1,6 @@
 ﻿using Snap_Bank.Models;
 using Snap_Bank.Services;
+using Snap_Bank.ViewModel;
 using Snap_Bank.ViewModel.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -11,35 +12,37 @@ namespace Snap_Bank.Controllers
 {
     public class SnapController : Controller
     {
-        IAccountNumberService accountNumberService;
-        
-        public SnapController(IAccountNumberService _accountNumberService)
+        public SnapController( )
         {
-            accountNumberService = _accountNumberService;
+            
         }
         // GET: Snap
         public ActionResult Index()
         {
             SnapDbContext db = new SnapDbContext();
-            db.securityQuestions.Add(new Models.SecurityQuestions { BirthPlace="hyasdd", PetName="ca", FavouriteFood="ck" });
+            //db.securityQuestions.Add(new Models.SecurityQuestions { BirthPlace="hyasdd", PetName="ca", FavouriteFood="ck" });
             //db.accountNumbers.Add(new Models.AccountNumber{ Date = "9819", number = 20 });
-            db.SaveChanges();
+            //db.SaveChanges();
             return View();
         }
         public ActionResult Register()
         {
+            RegisterViewModel registerViewModel = new RegisterViewModel();
             Random rnd = new Random();
             int myRandomNo = rnd.Next(100000000, 999999999);
-            ViewBag.RandomNumber = myRandomNo;
-            return View();
+            registerViewModel.AccountNumber = myRandomNo;
+            return View(registerViewModel);
         }
         public ActionResult Home()
         {
             return View();
         }
-        public ActionResult Questions()
+        public ActionResult Questions(RegisterViewModel registerViewModel,Gender? gender, AccountType? accountType)
         {
-            return View();
+            registerViewModel.Gender = gender.ToString();
+            registerViewModel.AccountType = accountType.ToString();
+            registerViewModel.CompleteSortCode = int.Parse(registerViewModel.SortCode1.ToString() + registerViewModel.SortCode2.ToString() + registerViewModel.SortCode3.ToString());
+            return View(registerViewModel);
         }
         public ActionResult ForgetPassword()
         {
