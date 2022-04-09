@@ -1,5 +1,6 @@
 ﻿using Snap_Bank.Models;
 using Snap_Bank.Services;
+using Snap_Bank.ViewModel;
 using Snap_Bank.ViewModel.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Snap_Bank.Controllers
     public class SnapController : Controller
     {
         IAccountNumberService accountNumberService;
-        
+
         public SnapController(IAccountNumberService _accountNumberService)
         {
             accountNumberService = _accountNumberService;
@@ -26,11 +27,21 @@ namespace Snap_Bank.Controllers
             db.SaveChanges();
             return View();
         }
+
         public ActionResult Register()
         {
             Random rnd = new Random();
             int myRandomNo = rnd.Next(100000000, 999999999);
             ViewBag.RandomNumber = myRandomNo;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Register(RegisterViewModel objreg)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
             return View();
         }
         public ActionResult Home()

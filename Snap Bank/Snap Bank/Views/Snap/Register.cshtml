@@ -19,7 +19,7 @@
                 <h4 class="text-center fw-bold mx-5 mb-4 mt-3">Register your account</h4>
             </div>
             <div class="mx-0 px-5">
-                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                @using (Html.BeginForm("Register", "SnapController", FormMethod.Post))
                 {
                     <div class="row">
                         <h6 style="color: brown;">Personal Details:</h6>
@@ -96,20 +96,13 @@
                             </div>
                             <div class="col-2 col-md-2 col-sd-12 mt-4">
                                 @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.AccountType))), "Select Account Type", new { htmlAttributes = new { @class = "form-select" } })
-
-                                @*<select class="form-select" onchange="hideShowRangePicker(this.value)">
-                                        <option selected>Choose Account Type</option>
-                                        <option value="Savings Account">Savings Account</option>
-                                        <option value="Current Account">Current Account</option>
-                                    </select>*@
                             </div>
                             <div class="col-6 col-md-6 col-sd-12">
                                 <label>Account Number</label>
-                                @Html.EditorFor(model => model.AccountNumber, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                @Html.TextBoxFor(model => model.AccountNumber, new { @Value = ViewBag.RandomNumber })
                                 @Html.ValidationMessageFor(model => model.AccountNumber, "", new { @class = "text-danger" })
                             </div>
                         </div>
-
                     </div>
                     <div style="padding-left: 10%; padding-right: 10%">
                         <hr />
