@@ -7,7 +7,9 @@
 
 @section AddToHead
 {
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
     <link href="@Url.Content("~/Content/Register.css")" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-1.12.4.min.js"></script>
 }
 
 <div class="pt-3 wrap-div">
@@ -36,39 +38,35 @@
                         <div class="row">
                             <div class="col-md-6 col-sd-12">
                                 <label>Date of Birth</label>
-
-                                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control form-control-md" } })
-                                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { id = "datepicker", @class = "form-control form-control-md" } })
+                                @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+                                <script>
+                                    $(document).ready(function () {
+                                        $("#datepicker").datepicker({
+                                            dateFormat: "dd-mm-yy",
+                                            changemonth: true,
+                                            changeyear: true
+                                        });
+                                    });
+                                </script>
                             </div>
                             <div class="col-md-6 col-sd-12">
                                 <label>Gender</label>
                                 <div style="margin: 0; padding: 0">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                               value="option1" />
-                                        <label class="form-check-label" for="inlineRadio1">Male</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                               value="option2" />
-                                        <label class="form-check-label" for="inlineRadio2">Female</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                               value="option3" />
-                                        <label class="form-check-label" for="inlineRadio3">Others</label>
-                                    </div>
+                                    @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.Gender))), "Select Gender", new { htmlAttributes = new { @class = "form-control form-control-md" } })
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sd-12">
                                 <label>Email</label>
-                                <input class="form-control form-control-md" />
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-md-6 col-sd-12">
                                 <label>Mobile Number</label>
-                                <input class="form-control form-control-md" />
+                                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
@@ -83,26 +81,32 @@
                                 <label>Sort Code</label>
                                 <div class="row">
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-md" />
+                                        @Html.EditorFor(model => model.SortCode1, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                        @Html.ValidationMessageFor(model => model.SortCode1, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-md" />
+                                        @Html.EditorFor(model => model.SortCode2, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                        @Html.ValidationMessageFor(model => model.SortCode2, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-md" />
+                                        @Html.EditorFor(model => model.SortCode3, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                        @Html.ValidationMessageFor(model => model.SortCode3, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                             </div>
                             <div class="col-2 col-md-2 col-sd-12 mt-4">
-                                <select class="form-select" onchange="hideShowRangePicker(this.value)">
-                                    <option selected>Choose Account Type</option>
-                                    <option value="Savings Account">Savings Account</option>
-                                    <option value="Current Account">Current Account</option>
-                                </select>
+                                @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.AccountType))), "Select Account Type", new { htmlAttributes = new { @class = "form-select" } })
+
+                                @*<select class="form-select" onchange="hideShowRangePicker(this.value)">
+                                        <option selected>Choose Account Type</option>
+                                        <option value="Savings Account">Savings Account</option>
+                                        <option value="Current Account">Current Account</option>
+                                    </select>*@
                             </div>
                             <div class="col-6 col-md-6 col-sd-12">
                                 <label>Account Number</label>
-                                <input class="form-control form-control-md" />
+                                @Html.EditorFor(model => model.AccountNumber, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                @Html.ValidationMessageFor(model => model.AccountNumber, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
@@ -115,22 +119,26 @@
                         <div class="row">
                             <div class="col-md-6  col-sd-12">
                                 <label>Username</label>
-                                <input class="form-control form-control-md" />
+                                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-md-3 col-sd-12">
                                 <label>Password</label>
-                                <input class="form-control form-control-md" />
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-md-3 col-sd-12">
                                 <label>Confirm Password</label>
-                                <input class="form-control form-control-md" />
+                                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-3 col-sd-12">
                                 <label>Pin</label>
-                                <input class="form-control form-control-md" />
+                                @Html.EditorFor(model => model.Pin, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                @Html.ValidationMessageFor(model => model.Pin, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-9">
                                 <button class="btn btn-primary" style="
@@ -149,4 +157,3 @@
         </div>
     </div>
 </div>
-

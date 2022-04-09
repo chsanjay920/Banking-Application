@@ -188,6 +188,9 @@
     <Content Include="obj\Debug\Snap Bank.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Snap Bank.dll" />
     <Content Include="obj\Debug\Snap Bank.pdb" />
+    <None Include="Scripts\jquery-1.12.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -254,6 +257,7 @@
     <Content Include="Views\Snap\AccountActivity.cshtml" />
     <Content Include="Views\Snap\PaymentSuccess.cshtml" />
     <Content Include="Views\Snap\FundTransfer.cshtml" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
