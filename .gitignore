@@ -16,3 +16,12 @@ Snap Bank/Snap Bank/Snap Bank.csproj
 *.pdb
 Snap Bank/Snap Bank/obj/Debug/Snap Bank.csproj.FileListAbsolute.txt
 *.cache
+*.config
+Snap Bank/Snap Bank/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Snap Bank/Snap Bank/obj/Debug/Snap Bank.csproj.AssemblyReference.cache
+Snap Bank/.vs/Snap Bank/v17/.suo
+*.dll
+Snap Bank/Snap Bank/bin/Snap Bank.pdb
+*.cache
+*.txt
+*.dll
