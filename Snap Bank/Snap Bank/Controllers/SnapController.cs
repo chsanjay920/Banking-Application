@@ -12,6 +12,7 @@ namespace Snap_Bank.Controllers
 {
     public class SnapController : Controller
     {
+        public static RegisterViewModel viewModel;
         public SnapController()
         {
 
@@ -31,17 +32,19 @@ namespace Snap_Bank.Controllers
             Random rnd = new Random();
             int myRandomNo = rnd.Next(100000000, 999999999);
             registerViewModel.AccountNumber = myRandomNo;
+            registerViewModel.SortCode1 = 12;
+            registerViewModel.SortCode2 = 93;
+            registerViewModel.SortCode3 = 64;
             return View(registerViewModel);
         }
-
-
         [HttpPost]
         public ActionResult Register(RegisterViewModel registerViewModel)
         {
+            registerViewModel.CompleteSortCode = int.Parse(registerViewModel.SortCode1.ToString() + registerViewModel.SortCode2.ToString() + registerViewModel.SortCode3.ToString());
             if (ModelState.IsValid)
             {
-
-                return RedirectToAction("Questions", "Snap", registerViewModel);
+                viewModel = registerViewModel;
+                return RedirectToAction("Questions");
             }
             return View(registerViewModel);
         }
@@ -50,16 +53,23 @@ namespace Snap_Bank.Controllers
         {
             return View();
         }
-        public ActionResult Questions(RegisterViewModel registerViewModel, Gender? gender, AccountType? accountType)
+        public ActionResult Questions()
+        {
+            return View(new QuestionsViewModel());
+        }
+        [HttpPost]
+        public ActionResult Questions(QuestionsViewModel questionsViewModel)
         {
             if (ModelState.IsValid)
             {
-                registerViewModel.Gender = gender.ToString();
-                registerViewModel.AccountType = accountType.ToString();
-                registerViewModel.CompleteSortCode = int.Parse(registerViewModel.SortCode1.ToString() + registerViewModel.SortCode2.ToString() + registerViewModel.SortCode3.ToString());
+                viewModel.SecurityQuestion1 = questionsViewModel.SecurityQuestion1.ToString();
+                viewModel.SecurityQuestion2 = questionsViewModel.SecurityQuestion2.ToString();
+                viewModel.SecurityQuestion3 = questionsViewModel.SecurityQuestion3.ToString();
+
             }
-            return View(registerViewModel);
+            return View(questionsViewModel);
         }
+
         public ActionResult ForgetPassword()
         {
             return View();

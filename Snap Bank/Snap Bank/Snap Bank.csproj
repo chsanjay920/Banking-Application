@@ -245,6 +245,7 @@
     <Compile Include="Services\SecurityQuestionsService.cs" />
     <Compile Include="Services\TransactionsService.cs" />
     <Compile Include="SnapDbContext.cs" />
+    <Compile Include="ViewModel\QuestionsViewModel.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />
     <Compile Include="ViewModel\ViewModel\AccountNumberViewModel.cs" />
     <Compile Include="ViewModel\ViewModel\AccountViewModel.cs" />

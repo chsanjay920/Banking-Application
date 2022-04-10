@@ -18,7 +18,7 @@ namespace Snap_Bank.ViewModel
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$", ErrorMessage = "Password must be between 6 and 20 characters and contain one uppercase letter, one lowercase letter, one digit and one special character.")]
         public String Password { get; set; }
 
-        
+
         public Decimal AccountNumber { get; set; }
 
         [Required]

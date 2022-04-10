@@ -40,12 +40,11 @@
                                 <label>Date of Birth</label>
                                 @Html.LabelFor(model => model.DateOfBirth)
                                 @Html.TextBoxFor(model => model.DateOfBirth, new { type = "date", @class = "form-control" })
-                                @*<input type="date" name="DateOfBirth" id="DateOfBirth" class="form-control" />*@
                             </div>
                             <div class="col-md-6 col-sd-12">
                                 <label>Gender</label>
                                 <div style="margin: 0; padding: 0">
-                                    @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.Gender))), "Select Gender", new { htmlAttributes = new { @class = "form-select" } })
+                                    @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.Gender))), "Select Gender", new { htmlAttributes = new { @class = "form-select form-control form-control-md" } })
                                 </div>
                             </div>
                         </div>
@@ -73,21 +72,21 @@
                                 <label>Sort Code</label>
                                 <div class="row">
                                     <div class="col">
-                                        @Html.EditorFor(model => model.SortCode1, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                        @Html.EditorFor(model => model.SortCode1, new { htmlAttributes = new { type = "number", @readonly = "readonly", @class = "form-control form-control-md" } })
                                         @Html.ValidationMessageFor(model => model.SortCode1, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col">
-                                        @Html.EditorFor(model => model.SortCode2, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                        @Html.EditorFor(model => model.SortCode2, new { htmlAttributes = new { type = "number", @readonly = "readonly", @class = "form-control form-control-md" } })
                                         @Html.ValidationMessageFor(model => model.SortCode2, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col">
-                                        @Html.EditorFor(model => model.SortCode3, new { htmlAttributes = new { @class = "form-control form-control-md" } })
+                                        @Html.EditorFor(model => model.SortCode3, new { htmlAttributes = new { type = "number", @readonly = "readonly", @class = "form-control form-control-md" } })
                                         @Html.ValidationMessageFor(model => model.SortCode3, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                             </div>
                             <div class="col-2 col-md-2 col-sd-12 mt-4">
-                                @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.AccountType))), "Select Account Type", new { htmlAttributes = new { @class = "form-select" } })
+                                @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(Snap_Bank.ViewModel.AccountType))), "Select Account Type", new { htmlAttributes = new { @class = "form-select form-control form-control-md" } })
                                 @Html.ValidationMessageFor(model => model.AccountType, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-6 col-md-6 col-sd-12">
@@ -104,7 +103,7 @@
                     <div class="row">
                         <h6 style="color: brown;">Login Details:</h6>
                         <div class="row">
-                            <div class="c       ol-md-6  col-sd-12">
+                            <div class="col-md-6  col-sd-12">
                                 <label>Username</label>
                                 @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control form-control-md" } })
                                 @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })

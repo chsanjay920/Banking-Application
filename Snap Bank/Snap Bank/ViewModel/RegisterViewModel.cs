@@ -51,14 +51,8 @@ namespace Snap_Bank.ViewModel
 
         [Required(ErrorMessage = "Please Enter Pin")]
         public int Pin { get; set; }
-
-        [Required(ErrorMessage = "Please Enter Your Birth Place")]
         public String SecurityQuestion1 { get; set; }
-
-        [Required(ErrorMessage = "Please Enter Your Pet Name")]
         public String SecurityQuestion2 { get; set; }
-
-        [Required(ErrorMessage = "Please Enter Your Favourite Food")]
         public String SecurityQuestion3 { get; set; }
     }
     public enum AccountType
