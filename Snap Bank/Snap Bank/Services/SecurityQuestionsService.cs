@@ -1,4 +1,5 @@
 ﻿using Snap_Bank.Models;
+using Snap_Bank.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,13 @@ namespace Snap_Bank.Services
     public class SecurityQuestionsService : ISecurityQuestionsService
     {
         SnapDbContext snapDbContext;
+        Mapper.Mapper map;
+        SecurityQuestions securityQuestion;
 
         public SecurityQuestionsService()
         {
+            map = new Mapper.Mapper();
+            securityQuestion = new SecurityQuestions();
             snapDbContext = new SnapDbContext();
         }
 
@@ -20,8 +25,10 @@ namespace Snap_Bank.Services
             return snapDbContext.securityQuestions.ToList();
         }
 
-        public bool Post(SecurityQuestions securityQuestion)
+        public bool Post(RegisterViewModel registerViewModel)
         {
+            securityQuestion = map.MapRegisterViewModelToSecurityQuestions(registerViewModel, securityQuestion);
+
             using (var dbContext = new SnapDbContext())
             {
                 dbContext.securityQuestions.Add(securityQuestion);
@@ -44,20 +51,20 @@ namespace Snap_Bank.Services
                 return false;
             }
         }
-        public bool Put(SecurityQuestions securityQuestion)
+        public bool Put(RegisterViewModel registerViewModel)
         {
-            using (var ent = new SnapDbContext())
-            {
-                var temp = ent.securityQuestions.Find(securityQuestion.UserId);
-                if (temp != null)
-                {
-                    temp.BirthPlace = securityQuestion.BirthPlace;
-                    temp.PetName = securityQuestion.PetName;
-                    temp.FavouriteFood = securityQuestion.FavouriteFood;
-                }
-                ent.SaveChanges();
-                return true;
-            }
+            //using (var ent = new SnapDbContext())
+            //{
+            //    var temp = ent.securityQuestions.Find(securityQuestion.UserId);
+            //    if (temp != null)
+            //    {
+            //        temp.BirthPlace = securityQuestion.BirthPlace;
+            //        temp.PetName = securityQuestion.PetName;
+            //        temp.FavouriteFood = securityQuestion.FavouriteFood;
+            //    }
+            //    ent.SaveChanges();
+            //    return true;
+            //}
             return false;
         }
     }

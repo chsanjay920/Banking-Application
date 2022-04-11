@@ -20,7 +20,7 @@ namespace Snap_Bank.ViewModel
         [RegularExpression(@"(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$", ErrorMessage = "Invalid date format.")]
         public DateTime DateOfBirth { get; set; }
 
-        
+
         [Required(ErrorMessage = "Please Provide Gender")]
         public String Gender { get; set; }
 

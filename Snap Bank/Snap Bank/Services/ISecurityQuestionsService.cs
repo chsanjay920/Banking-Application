@@ -1,4 +1,5 @@
 ﻿using Snap_Bank.Models;
+using Snap_Bank.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,10 @@ namespace Snap_Bank.Services
     {
         IEnumerable<SecurityQuestions> Get();
 
-        bool Post(SecurityQuestions securityQuestion);
+        bool Post(RegisterViewModel registerViewModel);
 
         bool Delete(int id);
 
-        bool Put(SecurityQuestions securityQuestion);
+        bool Put(RegisterViewModel registerViewModel);
     }
 }

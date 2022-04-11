@@ -1,7 +1,6 @@
 ﻿using Snap_Bank.Models;
 using Snap_Bank.Services;
 using Snap_Bank.ViewModel;
-using Snap_Bank.ViewModel.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +12,17 @@ namespace Snap_Bank.Controllers
     public class SnapController : Controller
     {
         public static RegisterViewModel viewModel;
-        public SnapController()
-        {
+        IAccountTableService accountTableService;
+        IPersonalDetailsService personalDetailsService;
+        ISecurityQuestionsService securityQuestionsService;
+        ITransactionsService transactionsService;
 
+        public SnapController(IAccountTableService _accountTableService, IPersonalDetailsService _personalDetailsService,ISecurityQuestionsService _securityQuestionsService, ITransactionsService _transactionsService)
+        {
+            accountTableService = _accountTableService;
+            personalDetailsService = _personalDetailsService;
+            securityQuestionsService = _securityQuestionsService;
+            transactionsService = _transactionsService;
         }
         // GET: Snap
         public ActionResult Index()
@@ -53,10 +60,12 @@ namespace Snap_Bank.Controllers
         {
             return View();
         }
+
         public ActionResult Questions()
         {
             return View(new QuestionsViewModel());
         }
+
         [HttpPost]
         public ActionResult Questions(QuestionsViewModel questionsViewModel)
         {
@@ -65,7 +74,9 @@ namespace Snap_Bank.Controllers
                 viewModel.SecurityQuestion1 = questionsViewModel.SecurityQuestion1.ToString();
                 viewModel.SecurityQuestion2 = questionsViewModel.SecurityQuestion2.ToString();
                 viewModel.SecurityQuestion3 = questionsViewModel.SecurityQuestion3.ToString();
-
+                accountTableService.Post(viewModel);
+                personalDetailsService.Post(viewModel);
+                securityQuestionsService.Post(viewModel);
             }
             return View(questionsViewModel);
         }

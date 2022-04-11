@@ -1,4 +1,5 @@
 ﻿using Snap_Bank.Models;
+using Snap_Bank.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,13 @@ namespace Snap_Bank.Services
     public class PersonalDetailsService : IPersonalDetailsService
     {
         SnapDbContext snapDbContext;
+        Mapper.Mapper map;
+        PersonalDetails personalDetail;
 
         public PersonalDetailsService()
         {
+            map = new Mapper.Mapper();
+            personalDetail = new PersonalDetails();
             snapDbContext = new SnapDbContext();
         }
 
@@ -20,8 +25,9 @@ namespace Snap_Bank.Services
             return snapDbContext.personalDetails.ToList();
         }
 
-        public bool Post(PersonalDetails personalDetail)
+        public bool Post(RegisterViewModel registerViewModel)
         {
+            personalDetail = map.MapRegisterViewModelToPersonalDetails(registerViewModel, personalDetail);
             using (var dbContext = new SnapDbContext())
             {
                 dbContext.personalDetails.Add(personalDetail);
@@ -44,23 +50,23 @@ namespace Snap_Bank.Services
                 return false;
             }
         }
-        public bool Put(PersonalDetails personalDetail)
+        public bool Put(RegisterViewModel registerViewModel)
         {
-            using (var ent = new SnapDbContext())
-            {
-                var temp = ent.personalDetails.Find(personalDetail.UserId);
-                if (temp != null)
-                {
-                    temp.FirstName = personalDetail.FirstName;
-                    temp.LastName = personalDetail.LastName;
-                    temp.DateOfBirth = personalDetail.DateOfBirth;
-                    temp.Gender = personalDetail.Gender;
-                    temp.Gmail = personalDetail.Gmail;
-                    temp.MobileNumber = personalDetail.MobileNumber;
-                }
-                ent.SaveChanges();
-                return true;
-            }
+            //using (var ent = new SnapDbContext())
+            //{
+            //    var temp = ent.personalDetails.Find(personalDetail.UserId);
+            //    if (temp != null)
+            //    {
+            //        temp.FirstName = personalDetail.FirstName;
+            //        temp.LastName = personalDetail.LastName;
+            //        temp.DateOfBirth = personalDetail.DateOfBirth;
+            //        temp.Gender = personalDetail.Gender;
+            //        temp.Gmail = personalDetail.Gmail;
+            //        temp.MobileNumber = personalDetail.MobileNumber;
+            //    }
+            //    ent.SaveChanges();
+            //    return true;
+            //}
             return false;
         }
     }

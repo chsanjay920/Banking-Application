@@ -1,5 +1,4 @@
-﻿using Microsoft.OData.Edm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -32,7 +31,7 @@ namespace Snap_Bank.ViewModel
 
         [Required(ErrorMessage = "Please Choose Account Type")]
         public String AccountType { get; set; }
-        public Decimal AccountNumber { get; set; }
+        public int AccountNumber { get; set; }
 
         [Required(ErrorMessage = "Please Enter UserName")]
         public String UserName { get; set; }
